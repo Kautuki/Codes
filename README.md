@@ -1,3 +1,3 @@
 # Codes
 
-COdes for leetcode problems
+Codes for leetcode problems
