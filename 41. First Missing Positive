@@ -1,0 +1,25 @@
+class Solution {
+    public int firstMissingPositive(int[] nums) {
+     Arrays.sort(nums);
+        int positivenumIndex=0;
+        for(int i=0;i<nums.length;i++){
+            if(nums[i]>0){
+                positivenumIndex=i;
+                break;
+            }
+        }
+        int found = 1;
+        
+        for(int i=positivenumIndex;i<nums.length;i++){
+            if(nums[i]==found){
+                found++;
+                continue;
+            }
+            if(nums[i]==found-1){
+                continue;
+            }
+            return found;
+        }
+        return found;
+    }
+}
