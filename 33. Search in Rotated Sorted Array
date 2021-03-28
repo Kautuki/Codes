@@ -1,0 +1,49 @@
+class Solution {
+    public int search(int[] nums, int target) {
+        
+                int ans=-1;
+     for(int i=0;i<nums.length;i++)
+     {
+         if(nums[i]==target)
+         {
+             ans=i;
+             break;
+         }
+     }
+        
+        return ans;
+   /*   
+   // for rotation //
+   
+   int n=nums.length;
+        if(n==1 && target>1)
+        {
+            return -1;
+        }
+        int[] temp=new int[n];
+        int j=0;
+        int ans=-1;
+        for(int i=target;i<n;i++)
+        {
+            temp[j]=nums[i];
+            if(temp[j]==target)
+            {
+                ans=j;
+            }
+            j++;
+            
+        }
+        
+        for(int i=0;i<target;i++)
+        {
+            temp[j]=nums[i];
+            if(temp[j]==target)
+            {
+                ans=j;
+            }
+            j++;
+        }*/
+
+        
+    }
+}
