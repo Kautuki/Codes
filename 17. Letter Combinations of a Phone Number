@@ -1,0 +1,26 @@
+class Solution {
+    public List<String> letterCombinations(String digits) {
+        
+        LinkedList<String> list1=new LinkedList<String>();
+        if(digits.isEmpty()) return list1;
+           String[] table
+            = { "0",   "1",   "abc",  "def", "ghi",
+                "jkl", "mno", "pqrs", "tuv", "wxyz" };
+        list1.add("");
+        for(int i=0;i<digits.length();i++)
+        {
+            int x=Character.getNumericValue(digits.charAt(i));
+            
+            while(list1.peek().length()==i)
+            {
+                String t=list1.remove();
+                for(char s:table[x].toCharArray())
+                {
+
+                    list1.add(t+s);
+                }
+            }
+        }
+        return list1;
+    }
+}
