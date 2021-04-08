@@ -1,0 +1,24 @@
+class Solution {
+    public boolean halvesAreAlike(String s) {
+        int n=s.length();
+        String s1=s.toLowerCase();
+        int count1=0,count2=0;
+        for(int i=0;i<n;i++)
+        {
+            if(s1.charAt(i)=='a' || s1.charAt(i)=='e'|| s1.charAt(i)=='i'|| s1.charAt(i)=='o'|| s1.charAt(i)=='u' )
+            {
+                if(i<n/2)
+                {
+                    count1++;
+                
+                }
+                else
+                {
+                    count2++;
+                }
+            }
+        }
+     //   System.out.println(count1+" "+count2);
+        return count1==count2;
+    }
+}
